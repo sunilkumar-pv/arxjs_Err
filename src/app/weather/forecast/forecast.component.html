@@ -1,0 +1,20 @@
+<p>forecast works!</p>
+
+<!-- <div *ngFor="let forecast of forecastData">
+    {{ forecast.temp | number: '1.0-0' }}`C
+    {{ forecast.dateString | date: 'E d' }}
+</div> -->
+
+<!-- 
+<div *ngFor="let forecast of forecast$ | async">
+    {{ forecast.temp | number: '1.0-0' }}`C
+    {{ forecast.dateString | date: 'E d' }}
+</div> -->
+<ul class="list-group">
+    <li *ngFor="let forecast of forecast$ | async" class="list-group-item weather-item"
+        >
+    <p class="temp"> {{ forecast.temp | number: '1.0-0' }}`C</p>
+    <p class="day">{{ forecast.dateString | date: 'E d' }}</p>
+    </li>
+</ul>
+
